@@ -1,0 +1,20 @@
+import { createContext } from "react";
+
+export type SidebarContextType = {
+  isExpanded: boolean;
+  isMobileOpen: boolean;
+  isHovered: boolean;
+  activeItem: string | null;
+  openSubmenu: string | null;
+  isApplicationMenuOpen: boolean;
+  toggleSidebar: () => void;
+  toggleMobileSidebar: () => void;
+  setIsHovered: (isHovered: boolean) => void;
+  setActiveItem: (item: string | null) => void;
+  toggleSubmenu: (item: string) => void;
+  toggleApplicationMenu: () => void;
+};
+
+export const SidebarContext = createContext<SidebarContextType | undefined>(
+  undefined
+);
